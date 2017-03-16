@@ -14,5 +14,5 @@ build_script:
   - msbuild Source/PrismLibrary_Win10.sln /p:AppxBundlePlatforms="$(BuildPlatform)" /p:AppxPackageDir="$(Build.BinariesDirectory)\AppxPackages\" /p:AppxBundle=Always
   - msbuild Source/PrismLibrary_Wpf.sln
 test_script:
-  - dotnet test Source/Prism.Tests/Prism.Tests.csproj
+  - dotnet test Source/Prism.Tests/Prism.Tests.csproj -v d
   - xunit.console.x86 Source/Xamarin/Prism.Forms.Tests/Prism.Forms.Tests.csproj -appveyor
