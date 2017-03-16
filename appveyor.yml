@@ -16,3 +16,5 @@ build_script:
 test_script:
   - dotnet test Source/Prism.Tests/Prism.Tests.csproj -v n
   - xunit.console.x86 Source/Xamarin/Prism.Forms.Tests/Prism.Forms.Tests.csproj -appveyor
+on_finish:
+  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
