@@ -9,8 +9,8 @@ before_build:
   - nuget restore Source/PrismLibrary_Win10.sln
   - nuget restore Source/PrismLibrary_Wpf.sln
 build_script:
-  - dotnet build Source/PrismLibrary_Core.sln
-  - msbuild Source/PrismLibrary_Xamarin.sln
+  #- dotnet build Source/PrismLibrary_Core.sln
+  #- msbuild Source/PrismLibrary_Xamarin.sln
   #- msbuild Source/PrismLibrary_Win10.sln /p:AppxBundlePlatforms="$(BuildPlatform)" /p:AppxPackageDir="$(Build.BinariesDirectory)\AppxPackages\" /p:AppxBundle=Always
   - msbuild Source/PrismLibrary_Wpf.sln
 test_script:
